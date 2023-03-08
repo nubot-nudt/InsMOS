@@ -1,8 +1,19 @@
 # InsMOS: Instance-Aware Moving Object Segmentation in LiDAR Data
 
-This repo contains the code  for our paper:
+This repository contains the implementation of our paper:
 
 > **InsMOS: Instance-Aware Moving Object Segmentation in LiDAR Data **                                                                                                                                                                                                                                                                                    Neng Wang,  [Chenghao Shi](https://github.com/chenghao-shi),  Ruibin Guo,  Huimin Lu,  Zhiqiang Zheng,  [Xieyuanli Chen](https://github.com/Chen-Xieyuanli)                                                                                                                                                      *arXiv technical report ([[arXiv 2303.03909](https://arxiv.org/abs/2303.03909)])*
+
+```
+@article{wang2023arxiv,
+	title={{InsMOS: Instance-Aware Moving Object Segmentation in LiDAR Data}},
+	author={Wang, Neng and Shi, Chenghao and Guo, Ruibin and Lu, Huimin and Zheng, Zhiqiang and Chen, Xieyuanli},
+	journal={arXiv preprint},
+	doi = {10.48550/ARXIV.2303.03909},
+	volume  = {2303.03909},
+	year={2023}
+}
+```
 
 ![gif_02](./docs/InsMOS.gif)
 
@@ -20,7 +31,7 @@ This repo contains the code  for our paper:
 
 ## Data
 
-1、Semantic-KITTI: Download Semantic-KITTI dataset from the official [website](http://semantic-kitti.org/). 
+1、SemanticKITTI: Download SemanticKITTI dataset from the official [website](http://semantic-kitti.org/). 
 
 2、KITTI-road Dataset: Download the KITTI-road Velodyne point clouds from the official [website](https://www.cvlibs.net/datasets/kitti/raw_data.php?type=road) and MOS label from [MotionSeg3D](https://github.com/haomo-ai/MotionSeg3D).
 
@@ -28,13 +39,13 @@ This repo contains the code  for our paper:
 
 ## Code
 
-To be released soon.
+The code and usage details will be available soon.
 
 ## Contact
 
 Any question or suggestions are welcome!
 
-Neng Wang: nwang@nudt.edu.cn
+Neng Wang: nwang@nudt.edu.cn and Xieyuanli Chen: xieyuanli.chen@nudt.edu.cn
 
 ## License
 
