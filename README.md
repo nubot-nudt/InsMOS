@@ -31,7 +31,13 @@ This repository contains the implementation of our paper:
 
 ![pipepline_15](./docs/pipepline_15.jpg)
 
-*Overview of our network. MotionNet mainly extracts motion features. Instance Detection Module extracts spatio-temporal features and detects instances. Upsample Fusion Module is applied to fuse the spatio-temporal and instance features, and predict point-wise moving confidence scores.*
+**Overview of our network.** The network is composed of three main components:
+
+- MotionNet mainly extracts motion features.  
+
+- Instance Detection Module extracts spatio-temporal features and detects instances. 
+
+- Upsample Fusion Module is applied to fuse the spatio-temporal and instance features, and predict point-wise moving confidence scores.
 
 ## Data
 
