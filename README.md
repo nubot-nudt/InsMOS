@@ -23,7 +23,7 @@ This repository contains the implementation of our paper:
 
 - *Our instance-aware moving object segmentation on the SemanticKITTI sequence 08 and 20, 21.*
 
-- *Red points are predicted as moving, and cyan are predicted as static instance points.*
+- *Red points indicate predicted moving points, cyan indicate predicted static instance points and gray points are static background.*
 
 - *Green bounding boxes represent cars, blue bounding boxes represent pedestrians, and yellow bounding boxes represent cyclists.*
 
