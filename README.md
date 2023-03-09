@@ -3,7 +3,9 @@
 This repository contains the implementation of our paper:
 
 > **InsMOS: Instance-Aware Moving Object Segmentation in LiDAR Data** ([[arXiv 2303.03909](https://arxiv.org/abs/2303.03909)]) 
+
 > [Neng Wang](https://github.com/WangNeng0326),  [Chenghao Shi](https://github.com/chenghao-shi),  Ruibin Guo,  Huimin Lu,  Zhiqiang Zheng,  [Xieyuanli Chen](https://github.com/Chen-Xieyuanli)   
+
 > If you use our code in your work, please star our repo and cite our paper.
 
 ```
