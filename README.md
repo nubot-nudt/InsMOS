@@ -45,9 +45,9 @@ This repository contains the implementation of our paper:
   |   | ├── 000001.label
   |   | └── ...
   |   ├── boundingbox_label
-  |	  |	├── 000000.npy
-  |	  |	├── 000001.npy
-  |	  |	└── ...
+  |   |	├── 000000.npy
+  |   |	├── 000001.npy
+  |   |	└── ...
   |   ├── calib.txt
   |   ├── poses.txt
   |   └── times.txt
