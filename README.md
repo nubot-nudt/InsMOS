@@ -144,11 +144,11 @@ python evaluate_mos.py --dataset /path/to/kitti --predictions ./preb_out_refine/
 
 Run the following command to visualize the results of moving object segmentation and instance prediction.
 
-Press key  `n`  to show next frame
+Press key  `n`  to show next frame.
 
-Press key  `b`  to show last frame
+Press key  `b`  to show last frame.
 
-Press key  `q`  to quit display
+Press key  `q`  to quit display.
 
 ```bash
 cd visual
