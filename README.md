@@ -59,7 +59,7 @@ This repository contains the implementation of our paper:
   └── 35 36 37 38 39 41 # for testing
 ```
 
-</details>  # Repeat the [x, y, z] eight times
+</details> 
 
 ## Installation
 
