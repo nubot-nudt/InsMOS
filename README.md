@@ -19,7 +19,7 @@ This repository contains the implementation of our paper:
 
 ## News
 
-- [2023/8/] Code released!
+- [2023/8/12] Code released!
 - [2023/6/22] Our work is accepted for IROS2023 :clap:
 
 ## Data
