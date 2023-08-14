@@ -1,10 +1,10 @@
 # InsMOS: Instance-Aware Moving Object Segmentation in LiDAR Data
 
-### [Project Page](https://neng-wang.github.io/InsMOS/) | [Video]() | [Paper]()
+### [Project Page](https://neng-wang.github.io/InsMOS/) | Video | [Paper](https://arxiv.org/abs/2303.03909)
 
 This repository contains the implementation of our paper:
 
-> **InsMOS: Instance-Aware Moving Object Segmentation in LiDAR Data** [[pdf](https://arxiv.org/abs/2303.03909)]\
+> **InsMOS: Instance-Aware Moving Object Segmentation in LiDAR Data**\
 > [Neng Wang](https://github.com/neng-wang),  [Chenghao Shi](https://github.com/chenghao-shi),  Ruibin Guo,  Huimin Lu,  Zhiqiang Zheng,  [Xieyuanli Chen](https://github.com/Chen-Xieyuanli)   
 
 <div align=center>
@@ -106,7 +106,7 @@ python setup.py install --blas_include_dirs=${CONDA_PREFIX}/include --blas=openb
 
 ## Inference
 
-Run the following command to evaluate the model in vAt this momentalidation dataset or test dataset. At this moment, a “preb_out” folder will be generated, which contains  “bbox_preb”, “confidence”, and “mos_preb” for storing the predicted  bounding boxes, confidence scores for moving points, and labels for  moving points, respectively.
+Run the following command to evaluate the model in SemanticKITTI validation dataset or test dataset. At this moment, a “preb_out” folder will be generated, which contains  “bbox_preb”, “confidence”, and “mos_preb” for storing the predicted  bounding boxes, confidence scores for moving points, and labels for  moving points, respectively.
 
 We public the model was trained on the SemanticKITTI dataset (N_10_t_0.1_odom.ckpt) and the other model was trained on the Semantic-KITTI and KITTI-road dataset (N_10_t_0.1_odom_road.ckpt). You can download from  [ondrive](https://1drv.ms/f/s!Ak6KrcxOqwZfkABaeJYYLb7ZT7Fg?e=zguXiK) or [BaiduDisk,code:59t7](https://pan.baidu.com/s/1TVBED6KZmEsJI6R_xjdLRQ?pwd=59t7), and then put the model in "ckpt" folder.
 
