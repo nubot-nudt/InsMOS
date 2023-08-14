@@ -1,0 +1,11 @@
+# Configuration for dataset root 
+# --------------------------------------------------------------------
+
+# data sequence
+seq: 8
+
+dataset_root: '/home/wangneng/data/kitti'
+
+prediction_root: '../preb_out_refine/mos_preb'
+
+prediction_bbox_root: '../preb_out/InsMOS/bbox_preb'

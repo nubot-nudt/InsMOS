@@ -1,0 +1,156 @@
+EXPERIMENT:
+  ID: InsMOS # Give your logs and model a unique name
+
+##Data
+DATA:
+  POINT_CLOUD_RANGE: [-60, -50, -3, 60, 50, 1] 
+  CLASE_NAME: ['Car', 'Pedestrian', 'Cyclist']
+  TRANSFORM: True # If true, the points are pose-aligned before feeding to the model
+  POSES: "poses.txt" # Name of the pose file provided in each sequence folder
+  SHUFFLE: True
+  NUM_WORKER: 4
+  DELTA_T_DATA: 0.1 # Time between scans in the dataset (0.1s for KITTI)
+  VOXEL_SIZE: [0.1, 0.1, 0.1] #
+  SEMANTIC_CONFIG_FILE: "./config/semantic-kitti-mos.yaml"
+  
+  SPLIT:
+    TRAIN:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 9
+      - 10
+      # - 30
+      # - 31
+      # - 32
+      # - 33
+      # - 34
+      # - 40
+    VAL:
+      - 8
+      # - 35
+      # - 36
+      # - 37
+      # - 38
+      # - 39
+      # - 41
+    TEST:
+      - 8
+      # - 11
+      # - 12
+      # - 13
+      # - 14
+      # - 15
+      # - 16
+      # - 17
+      # - 18
+      # - 19
+      # - 20
+      # - 21
+ 
+##Training
+TRAIN:
+  MAX_EPOCH: 160
+  LR: 0.0001
+  LR_EPOCH: 1
+  LR_DECAY: 0.99
+  WEIGHT_DECAY: 0.0001
+  BATCH_SIZE: 4
+  ACC_BATCHES: 1
+  AUGMENTATION: True
+  
+
+DATA_PROCESSOR:
+    - NAME: mask_points_and_boxes_outside_range
+      REMOVE_OUTSIDE_BOXES: True
+
+    - NAME: shuffle_points
+      SHUFFLE_ENABLED: {
+        'train': True,
+        'test': False
+      }
+
+DATA_AUGMENTOR:
+    DISABLE_AUG_LIST: ['placeholder']
+    AUG_CONFIG_LIST:
+        - NAME: random_world_flip
+          ALONG_AXIS_LIST: ['x']
+
+        - NAME: random_world_rotation
+          WORLD_ROT_ANGLE: [-0.78539816, 0.78539816]
+
+        - NAME: random_world_scaling
+          WORLD_SCALE_RANGE: [0.95, 1.05]
+
+
+##Network
+MODEL:
+  DELTA_T_PREDICTION: 0.1 # Temporal resolution of scans
+  N_PAST_STEPS: 10 # the number of input LiDAR scans
+  USE_MOTION_LOSS: True
+  
+  POINT_FEATURE_ENCODING: {
+    encoding_type: absolute_coordinates_encoding,
+    used_feature_list: ['x', 'y', 'z', 'intensity'],
+    src_feature_list: ['x', 'y', 'z', 'intensity'],
+  }
+  VFE:
+      NAME: MeanVFE
+
+  BACKBONE_3D:
+      NAME: VoxelBackBone8x
+
+  MAP_TO_BEV:
+      NAME: HeightCompression
+      NUM_BEV_FEATURES: 256
+
+  BACKBONE_2D:
+      NAME: BaseBEVBackbone
+
+      LAYER_NUMS: [5]
+      LAYER_STRIDES: [1]
+      NUM_FILTERS: [128]
+      UPSAMPLE_STRIDES: [2]
+      NUM_UPSAMPLE_FILTERS: [256]
+
+  DENSE_HEAD:
+      NAME: CenterHead
+      CLASS_AGNOSTIC: False
+      CLASE_NAME: ['Car', 'Pedestrian', 'Cyclist']
+      NUM_CLASS: 3
+      
+      USE_DIRECTION_CLASSIFIER: False 
+
+      TARGET_ASSIGNER_CONFIG:
+          MAX_OBJS: 100
+          VOXEL_SIZE: [0.1, 0.1, 0.1]
+          OUT_SIZE_FACTOR: 4
+          GAUSSIAN_OVERLAP: 0.1
+          MIN_RADIUS: 2
+          BOX_CODER: ResidualCoder
+          
+      LOSS_CONFIG:
+          LOSS_WEIGHTS: {
+              'cls_weight': 1.0,
+              'loc_weight': 2.0,
+              'code_weights': [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+          }
+
+  POST_PROCESSING:
+      RECALL_THRESH_LIST: [0.3, 0.5, 0.7]
+      SCORE_THRESH: 0.1
+      OUTPUT_RAW_SCORE: False
+
+      EVAL_METRIC: kitti
+
+      NMS_CONFIG:
+          MULTI_CLASSES_NMS: False
+          NMS_TYPE: nms_gpu
+          NMS_THRESH: 0.01
+          NMS_PRE_MAXSIZE: 4096
+          NMS_POST_MAXSIZE: 500
