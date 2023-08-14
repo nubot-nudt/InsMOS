@@ -126,7 +126,7 @@ python evaluate_mos.py --dataset /path/to/kitti --predictions ./preb_out/InsMOS/
 
 ### Refine
 
-Run the following command to refine the network predictions
+Run the following command to refine the network predictions.
 
 ```bash
 python scripts/refine.py --data_path /path/to/kitti/sequences --split valid
@@ -134,7 +134,7 @@ python scripts/refine.py --data_path /path/to/kitti/sequences --split valid
 
 ### Re-evaluate the refinement
 
-Re-evaluate the results of refinement
+Re-evaluate the results of refinement.
 
 ```bash
 python evaluate_mos.py --dataset /path/to/kitti --predictions ./preb_out_refine/mos_preb --split valid 
