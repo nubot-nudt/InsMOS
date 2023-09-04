@@ -72,9 +72,9 @@ def main(config, weights, checkpoint):
     )
     # Setup trainer
     trainer = Trainer(
-        # gpus=1,               # for sigle GPU
-        accelerator="gpu",  # for Multi gpu
-        devices=[0,1,2,3],  # for Multi GPU
+        gpus=1,               # for sigle GPU
+        # accelerator="gpu",  # for Multi gpu
+        # devices=[0,1,2,3],  # for Multi GPU
         strategy="ddp",
         logger=tb_logger,
         max_epochs=cfg["TRAIN"]["MAX_EPOCH"],

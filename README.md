@@ -104,6 +104,20 @@ conda activate insmos
 python setup.py install --blas_include_dirs=${CONDA_PREFIX}/include --blas=openblas
 ```
 
+#### 3. Install InsMOS
+
+```bash
+# clone code
+git clone https://github.com/nubot-nudt/InsMOS.git
+cd InsMOS
+
+# activate conda
+conda activate insmos
+
+# install
+python setup.py develop
+```
+
 ## Inference
 
 Run the following command to evaluate the model in SemanticKITTI validation dataset or test dataset. At this moment, a “preb_out” folder will be generated, which contains  “bbox_preb”, “confidence”, and “mos_preb” for storing the predicted  bounding boxes, confidence scores for moving points, and labels for  moving points, respectively.
