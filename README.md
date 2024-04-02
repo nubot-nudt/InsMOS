@@ -1,6 +1,6 @@
 # InsMOS: Instance-Aware Moving Object Segmentation in LiDAR Data
 
-### [Project Page](https://neng-wang.github.io/InsMOS/) | Video | [Paper](https://arxiv.org/abs/2303.03909)
+### [Project Page](https://neng-wang.github.io/InsMOS/) | Video | [Paper](https://arxiv.org/abs/2303.03909) | [IEEE](https://ieeexplore.ieee.org/document/10342277)
 
 This repository contains the implementation of our paper:
 
@@ -21,6 +21,21 @@ This repository contains the implementation of our paper:
 
 - [2023/8/12] Code released!
 - [2023/6/22] Our work is accepted for IROS2023 :clap:
+
+  
+## Citation
+
+If you use our code in your work, please star our repo and cite our paper.
+
+```bibtex
+@inproceedings{wang2023iros,
+	title={{InsMOS: Instance-Aware Moving Object Segmentation in LiDAR Data}},
+	author={Wang, Neng and Shi, Chenghao and Guo, Ruibin and Lu, Huimin and Zheng, Zhiqiang and Chen, Xieyuanli},
+	booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+        pages={7598-7605},
+	year={2023}
+}
+```
 
 ## Data
 
@@ -182,21 +197,6 @@ If the training process is interrupted unexpectedly, you can resume the training
 
 ```bash
 python scripts/train.py --weights ./logs/InsMOS/version_x/checkpoints/last.ckpt --checkpoint ./logs/InsMOS/version_x/checkpoints/last.ckpt
-```
-
-## Citation
-
-If you use our code in your work, please star our repo and cite our paper.
-
-```bibtex
-@article{wang2023arxiv,
-	title={{InsMOS: Instance-Aware Moving Object Segmentation in LiDAR Data}},
-	author={Wang, Neng and Shi, Chenghao and Guo, Ruibin and Lu, Huimin and Zheng, Zhiqiang and Chen, Xieyuanli},
-	journal={arXiv preprint},
-	doi = {10.48550/ARXIV.2303.03909},
-	volume  = {2303.03909},
-	year={2023}
-}
 ```
 
 ## Contact
