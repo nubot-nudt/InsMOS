@@ -203,7 +203,7 @@ python scripts/train.py --weights ./logs/InsMOS/version_x/checkpoints/last.ckpt 
 
 Any question or suggestions are welcome!
 
-Neng Wang: nwang@nudt.edu.cn and Xieyuanli Chen: xieyuanli.chen@nudt.edu.cn
+Neng Wang: nwang@nudt.edu.cn and Xieyuanli Chen: [website](https://github.com/Chen-Xieyuanli)
 
 ## License
 
