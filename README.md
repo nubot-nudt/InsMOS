@@ -1,6 +1,10 @@
+<div align="center">
+
 # InsMOS: Instance-Aware Moving Object Segmentation in LiDAR Data
 
 ### [Project Page](https://neng-wang.github.io/InsMOS/) | Video | [Paper](https://arxiv.org/abs/2303.03909) | [IEEE](https://ieeexplore.ieee.org/document/10342277)
+
+</div>
 
 This repository contains the implementation of our paper:
 
@@ -19,8 +23,8 @@ This repository contains the implementation of our paper:
 
 ## News
 
-- [2023/8/12] Code released!
-- [2023/6/22] Our work is accepted for IROS2023 :clap:
+- [2023-8-12] Code released!
+- [2023-6-22] Our work is accepted for IROS2023 :clap:
 
   
 ## Citation
