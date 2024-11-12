@@ -2,7 +2,7 @@
 
 # InsMOS: Instance-Aware Moving Object Segmentation in LiDAR Data
 
-[![](https://img.shields.io/badge/Page-InsMOS-d6ccc2?style=flat-square&labelColor=495057&logoColor=white)](https://neng-wang.github.io/InsMOS/) [![](https://img.shields.io/badge/Paper-IEEE-023e8a?style=flat-square&labelColor=495057&logoColor=white)](https://ieeexplore.ieee.org/document/10342277) [![](https://img.shields.io/badge/Paper-arXiv-d62828?style=flat-square&labelColor=495057&logoColor=white)](https://arxiv.org/abs/2303.03909)
+[![](https://img.shields.io/badge/Page-InsMOS-d6ccc2?style=flat-square&labelColor=495057&logoColor=white)](https://neng-wang.github.io/InsMOS/)  [![](https://img.shields.io/badge/Paper-IEEE-023e8a?style=flat-square&labelColor=495057&logoColor=white)](https://ieeexplore.ieee.org/document/10342277)  [![](https://img.shields.io/badge/Paper-arXiv-d62828?style=flat-square&labelColor=495057&logoColor=white)](https://arxiv.org/abs/2303.03909)
 
 </div>
 
