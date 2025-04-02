@@ -6,7 +6,7 @@
 
 </div>
 
-
+#### **We propose an extended version, named [SegNet4D](https://github.com/nubot-nudt/SegNet4D), featuring  complete 4D semantic segmentation capability and enhanced motion  recognition performance.**
 
 This repository contains the implementation of our paper:
 
