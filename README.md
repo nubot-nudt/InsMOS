@@ -36,10 +36,9 @@ If you use our code in your work, please star our repo and cite our paper.
 ```bibtex
 @inproceedings{wang2023iros,
 	title={{InsMOS: Instance-Aware Moving Object Segmentation in LiDAR Data}},
-	author={Wang, Neng and Shi, Chenghao and Guo, Ruibin and Lu, Huimin and Zheng, Zhiqiang and Chen, Xieyuanli},
-	booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-        pages={7598-7605},
-	year={2023}
+	author={Shuaifeng Jiao, Zhuoqun Su, Lun Luo, Hongshan Yu, Zongtan Zhou, Huimin Lu, Xieyuanli Chen},
+	booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
+	year={2025}
 }
 ```
 
